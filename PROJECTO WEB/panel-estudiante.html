@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estudiante - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;&nbsp;
+            <a href="nosotros.html"><img src="img/insignia.png" style="height: 65px;" width="60PX"></a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="panel-estudiante.html" class="active">Panel de Estudiante</a></li>
+                <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                <li><a href="comunicacion.html">Comunicación</a></li>
+                <li><a href="noticias.html">Noticias Escolares</a></li>
+                <li><a href="blog.html">Blog Educativo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <h2>Acceso al Panel de Estudiante</h2>
+                <div class="login-container">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="username">Usuario:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn">Iniciar Sesión</button>
+                    </form>
+                    <div class="login-help">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <p>Si no tienes acceso, contacta a la administración escolar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard hidden" id="student-dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>Panel de <span id="student-name">Estudiante</span></h2>
+                    <button id="logout-btn" class="btn btn-small">Cerrar Sesión</button>
+                </div>
+                
+                <div class="dashboard-content">
+                    <div class="dashboard-sidebar">
+                        <div class="student-profile">
+                            <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="profile-pic">
+                            <h3 id="student-full-name">Nombre del Estudiante</h3>
+                            <p id="student-grade">Grado: 5° Primaria</p>
+                        </div>
+                        <ul class="dashboard-menu">
+                            <li class="active" data-tab="academic">Rendimiento Académico</li>
+                            <li data-tab="emotional">Estado Emocional</li>
+                            <li data-tab="attendance">Asistencia</li>
+                            <li data-tab="messages">Mensajes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dashboard-main">
+                        <div class="tab-content active" id="academic-tab">
+                            <h3>Rendimiento Académico</h3>
+                            <div class="grades-overview">
+                                <div class="semester-selector">
+                                    <label for="semester">Periodo:</label>
+                                    <select id="semester">
+                                        <option value="1">Primer Bimestre</option>
+                                        <option value="2">Segundo Bimestre</option>
+                                        <option value="3">Tercer Bimestre</option>
+                                        <option value="4">Cuarto Bimestre</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="grades-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Asignatura</th>
+                                                <th>Calificación</th>
+                                                <th>Promedio Grupal</th>
+                                                <th>Comentarios</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="grades-body">
+                                            <!-- Datos de ejemplo, se llenarán con JavaScript -->
+                                            <tr>
+                                                <td>Matemáticas</td>
+                                                <td>85</td>
+                                                <td>78</td>
+                                                <td>Buen desempeño en álgebra, necesita reforzar geometría.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Español</td>
+                                                <td>92</td>
+                                                <td>80</td>
+                                                <td>Excelente comprensión lectora y redacción.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ciencias Naturales</td>
+                                                <td>88</td>
+                                                <td>82</td>
+                                                <td>Participación activa en clase.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Historia</td>
+                                                <td>78</td>
+                                                <td>75</td>
+                                                <td>Necesita mejorar en fechas y eventos históricos.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="grades-chart">
+                                    <h4>Evolución del Rendimiento</h4>
+                                    <div class="chart-container">
+                                        <canvas id="gradesChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="emotional-tab">
+                            <h3>Estado Emocional</h3>
+                            <div class="emotional-tracking">
+                                <div class="emotional-overview">
+                                    <h4>Resumen del Periodo</h4>
+                                    <div class="emotional-stats">
+                                        <div class="stat-card">
+                                            <div class="stat-title">Estado predominante</div>
+                                            <div class="stat-value">Motivado</div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-title">Días felices</div>
+                                            <div class="stat-value">18/20</div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-title">Nivel de estrés</div>
+                                            <div class="stat-value">Bajo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="emotional-calendar">
+                                    <h4>Calendario Emocional</h4>
+                                    <div class="calendar-container" id="emotional-calendar">
+                                        <!-- Se generará con JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="emotional-input">
+                                    <h4>¿Cómo te sientes hoy?</h4>
+                                    <div class="emotion-selector">
+                                        <button class="emotion-btn" data-emotion="happy">😀 Feliz</button>
+                                        <button class="emotion-btn" data-emotion="calm">😌 Tranquilo</button>
+                                        <button class="emotion-btn" data-emotion="sad">😔 Triste</button>
+                                        <button class="emotion-btn" data-emotion="angry">😠 Enojado</button>
+                                        <button class="emotion-btn" data-emotion="worried">😟 Preocupado</button>
+                                    </div>
+                                    <div class="emotion-notes">
+                                        <label for="emotion-note">¿Quieres compartir algo más?</label>
+                                        <textarea id="emotion-note" rows="3"></textarea>
+                                        <button class="btn btn-small">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="attendance-tab">
+                            <h3>Registro de Asistencia</h3>
+                            <div class="attendance-overview">
+                                <div class="attendance-stats">
+                                    <div class="stat-card">
+                                        <div class="stat-title">Asistencia</div>
+                                        <div class="stat-value">95%</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-title">Faltas</div>
+                                        <div class="stat-value">3</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-title">Retardos</div>
+                                        <div class="stat-value">2</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="attendance-calendar">
+                                    <h4>Calendario de Asistencia</h4>
+                                    <div class="calendar-container" id="attendance-calendar">
+                                        <!-- Se generará con JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="messages-tab">
+                            <h3>Mensajes</h3>
+                            <div class="messages-container">
+                                <div class="message-list">
+                                    <div class="message unread">
+                                        <div class="message-header">
+                                            <span class="sender">Prof. García - Matemáticas</span>
+                                            <span class="date">15/05/2025</span>
+                                        </div>
+                                        <div class="message-preview">Recordatorio: Entrega del proyecto final...</div>
+                                    </div>
+                                    <div class="message">
+                                        <div class="message-header">
+                                            <span class="sender">Orientación Escolar</span>
+                                            <span class="date">10/05/2025</span>
+                                        </div>
+                                        <div class="message-preview">Invitación a taller de técnicas de estudio...</div>
+                                    </div>
+                                    <div class="message">
+                                        <div class="message-header">
+                                            <span class="sender">Dirección Académica</span>
+                                            <span class="date">05/05/2025</span>
+                                        </div>
+                                        <div class="message-preview">Información sobre el calendario de exámenes...</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="message-view">
+                                    <div class="message-full">
+                                        <div class="message-full-header">
+                                            <h4>Recordatorio: Entrega del proyecto final</h4>
+                                            <div class="message-meta">
+                                                <span class="sender">Prof. García - Matemáticas</span>
+                                                <span class="date">15/05/2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="message-body">
+                                            <p>Estimado estudiante,</p>
+                                            <p>Te recuerdo que la entrega del proyecto final de matemáticas está programada para el próximo viernes 22 de mayo. El proyecto debe incluir todos los elementos discutidos en clase y seguir el formato establecido.</p>
+                                            <p>Si tienes alguna duda, no dudes en contactarme durante las horas de asesoría o por este medio.</p>
+                                            <p>Saludos cordiales,<br>Prof. García</p>
+                                        </div>
+                                        <div class="message-actions">
+                                            <button class="btn btn-small">Responder</button>
+                                            <button class="btn btn-small btn-outline">Marcar como leído</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>"Familias que Acompañan"</h2>
+                    <p>Conectando la comunidad educativa</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                        <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                        <li><a href="comunicacion.html">Comunicación</a></li>
+                        <li><a href="noticias.html">Noticias Escolares</a></li>
+                        <li><a href="blog.html">Blog Educativo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>Email: soporte@familasqueacompañan.com</p>
+                    <p>Teléfono: (+51) 973-573-095</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Familias que acompañan &copy; 2025, todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

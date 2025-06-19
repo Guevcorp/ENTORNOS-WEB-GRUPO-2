@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Educativo - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;&nbsp;
+             <a href="nosotros.html"><img src="img/insignia.png" style="height: 65px;" width="60PX"></a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                <li><a href="comunicacion.html">Comunicación</a></li>
+                <li><a href="noticias.html">Noticias Escolares</a></li>
+                <li><a href="blog.html" class="active">Blog Educativo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Blog Educativo</h2>
+                <p>Contenido actualizado sobre crianza, educación y acompañamiento</p>
+            </div>
+        </section>
+
+        <section class="blog-featured">
+            <div class="container">
+                <div class="featured-post">
+                    <div class="featured-image">
+                        <img src="https://via.placeholder.com/800x400" alt="Artículo destacado">
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="post-category">Crianza</span>
+                            <span class="post-date">15 de Mayo, 2025</span>
+                        </div>
+                        <h3>Cómo Fomentar la Autonomía en Niños y Adolescentes</h3>
+                        <p>La autonomía es una habilidad fundamental que permite a los niños y adolescentes tomar decisiones responsables, resolver problemas y desarrollar confianza en sí mismos. En este artículo, exploramos estrategias prácticas para fomentar la autonomía en diferentes etapas del desarrollo.</p>
+                        <div class="post-author">
+                            <img src="https://via.placeholder.com/50" alt="Foto del autor">
+                            <div class="author-info">
+                                <h4>Dra. María González</h4>
+                                <p>Psicóloga Educativa</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">Leer Artículo Completo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <div class="blog-layout">
+                    <div class="blog-main">
+                        <div class="blog-filter">
+                            <div class="filter-options">
+                                <button class="filter-btn active" data-filter="all">Todos</button>
+                                <button class="filter-btn" data-filter="parenting">Crianza</button>
+                                <button class="filter-btn" data-filter="education">Educación</button>
+                                <button class="filter-btn" data-filter="development">Desarrollo</button>
+                                <button class="filter-btn" data-filter="technology">Tecnología</button>
+                            </div>
+                            <div class="search-blog">
+                                <input type="text" placeholder="Buscar en el blog...">
+                                <button>Buscar</button>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-posts">
+                            <div class="blog-card" data-category="education">
+                                <div class="blog-card-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Aprendizaje activo">
+                                    <span class="post-category">Educación</span>
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="post-date">10 de Mayo, 2025</div>
+                                    <h4>Estrategias de Aprendizaje Activo para Implementar en Casa</h4>
+                                    <p>Descubre cómo transformar el aprendizaje en casa mediante técnicas que promueven la participación activa y el pensamiento crítico en los estudiantes.</p>
+                                    <div class="post-footer">
+                                        <a href="#" class="read-more">Leer más</a>
+                                        <div class="post-stats">
+                                            <span><i class="icon">👁️</i> 245</span>
+                                            <span><i class="icon">💬</i> 18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card" data-category="parenting">
+                                <div class="blog-card-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Comunicación efectiva">
+                                    <span class="post-category">Crianza</span>
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="post-date">5 de Mayo, 2025</div>
+                                    <h4>Comunicación Efectiva con Adolescentes: Claves para Padres</h4>
+                                    <p>La adolescencia puede ser un período desafiante para la comunicación familiar. Aprende técnicas para mantener canales de comunicación abiertos y efectivos.</p>
+                                    <div class="post-footer">
+                                        <a href="#" class="read-more">Leer más</a>
+                                        <div class="post-stats">
+                                            <span><i class="icon">👁️</i> 312</span>
+                                            <span><i class="icon">💬</i> 24</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card" data-category="development">
+                                <div class="blog-card-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Inteligencia emocional">
+                                    <span class="post-category">Desarrollo</span>
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="post-date">1 de Mayo, 2025</div>
+                                    <h4>Desarrollando la Inteligencia Emocional desde la Infancia</h4>
+                                    <p>La inteligencia emocional es tan importante como la académica. Conoce cómo ayudar a tus hijos a reconocer, entender y gestionar sus emociones de manera saludable.</p>
+                                    <div class="post-footer">
+                                        <a href="#" class="read-more">Leer más</a>
+                                        <div class="post-stats">
+                                            <span><i class="icon">👁️</i> 287</span>
+                                            <span><i class="icon">💬</i> 21</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card" data-category="technology">
+                                <div class="blog-card-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Tecnología educativa">
+                                    <span class="post-category">Tecnología</span>
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="post-date">25 de Abril, 2025</div>
+                                    <h4>Herramientas Digitales que Potencian el Aprendizaje</h4>
+                                    <p>Explora aplicaciones y plataformas educativas que pueden complementar el aprendizaje escolar y hacer que el estudio sea más interactivo y efectivo.</p>
+                                    <div class="post-footer">
+                                        <a href="#" class="read-more">Leer más</a>
+                                        <div class="post-stats">
+                                            <span><i class="icon">👁️</i> 198</span>
+                                            <span><i class="icon">💬</i> 15</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card" data-category="parenting">
+                                <div class="blog-card-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Establecer límites">
+                                    <span class="post-category">Crianza</span>
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="post-date">20 de Abril, 2025</div>
+                                    <h4>El Arte de Establecer Límites Claros y Consistentes</h4>
+                                    <p>Los límites son fundamentales para el desarrollo saludable de los niños. Aprende a establecerlos de manera efectiva sin caer en la rigidez o la permisividad excesiva.</p>
+                                    <div class="post-footer">
+                                        <a href="#" class="read-more">Leer más</a>
+                                        <div class="post-stats">
+                                            <span><i class="icon">👁️</i> 276</span>
+                                            <span><i class="icon">💬</i> 32</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card" data-category="education">
+                                <div class="blog-card-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Hábitos de estudio">
+                                    <span class="post-category">Educación</span>
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="post-date">15 de Abril, 2025</div>
+                                    <h4>Cómo Ayudar a tu Hijo a Desarrollar Hábitos de Estudio Efectivos</h4>
+                                    <p>Los buenos hábitos de estudio son la base del éxito académico. Descubre estrategias prácticas para ayudar a tus hijos a organizarse y estudiar de manera más eficiente.</p>
+                                    <div class="post-footer">
+                                        <a href="#" class="read-more">Leer más</a>
+                                        <div class="post-stats">
+                                            <span><i class="icon">👁️</i> 234</span>
+                                            <span><i class="icon">💬</i> 19</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pagination">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn next">→</button>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-sidebar">
+                        <div class="sidebar-widget popular-posts">
+                            <h3>Artículos Populares</h3>
+                            <div class="popular-post">
+                                <img src="https://via.placeholder.com/80" alt="Artículo popular">
+                                <div class="popular-post-content">
+                                    <h4>Cómo Manejar la Ansiedad Escolar</h4>
+                                    <div class="post-meta">
+                                        <span class="post-date">10 de Abril, 2025</span>
+                                        <span class="post-views">320 lecturas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <img src="https://via.placeholder.com/80" alt="Artículo popular">
+                                <div class="popular-post-content">
+                                    <h4>Motivación Académica: Claves para Mantenerla</h4>
+                                    <div class="post-meta">
+                                        <span class="post-date">5 de Abril, 2025</span>
+                                        <span class="post-views">295 lecturas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <img src="https://via.placeholder.com/80" alt="Artículo popular">
+                                <div class="popular-post-content">
+                                    <h4>El Impacto de la Alimentación en el Aprendizaje</h4>
+                                    <div class="post-meta">
+                                        <span class="post-date">1 de Abril, 2025</span>
+                                        <span class="post-views">278 lecturas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-widget categories">
+                            <h3>Categorías</h3>
+                            <ul>
+                                <li><a href="#">Crianza <span>(12)</span></a></li>
+                                <li><a href="#">Educación <span>(15)</span></a></li>
+                                <li><a href="#">Desarrollo <span>(8)</span></a></li>
+                                <li><a href="#">Tecnología <span>(6)</span></a></li>
+                                <li><a href="#">Salud <span>(9)</span></a></li>
+                                <li><a href="#">Bienestar Emocional <span>(11)</span></a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-widget tags">
+                            <h3>Etiquetas</h3>
+                            <div class="tag-cloud">
+                                <a href="#" class="tag">Adolescencia</a>
+                                <a href="#" class="tag">Aprendizaje</a>
+                                <a href="#" class="tag">Motivación</a>
+                                <a href="#" class="tag">Lectura</a>
+                                <a href="#" class="tag">Emociones</a>
+                                <a href="#" class="tag">Tecnología</a>
+                                <a href="#" class="tag">Hábitos</a>
+                                <a href="#" class="tag">Comunicación</a>
+                                <a href="#" class="tag">Disciplina</a>
+                                <a href="#" class="tag">Desarrollo</a>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-widget newsletter">
+                            <h3>Suscríbete al Blog</h3>
+                            <p>Recibe los nuevos artículos directamente en tu correo.</p>
+                            <form class="sidebar-form">
+                                <input type="email" placeholder="Tu correo electrónico" required>
+                                <button type="submit" class="btn btn-small">Suscribirse</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-authors">
+            <div class="container">
+                <h3>Nuestros Colaboradores</h3>
+                <div class="authors-grid">
+                    <div class="author-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto del autor">
+                        <h4>Dra. María González</h4>
+                        <p class="author-title">Psicóloga Educativa</p>
+                        <p class="author-bio">Especialista en desarrollo infantil y adolescente con más de 15 años de experiencia en entornos educativos.</p>
+                        <div class="author-social">
+                            <a href="#" class="social-icon">TW</a>
+                            <a href="#" class="social-icon">LI</a>
+                        </div>
+                    </div>
+                    
+                    <div class="author-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto del autor">
+                        <h4>Dr. Carlos Ramírez</h4>
+                        <p class="author-title">Pedagogo</p>
+                        <p class="author-bio">Investigador en metodologías educativas innovadoras y autor de varios libros sobre educación personalizada.</p>
+                        <div class="author-social">
+                            <a href="#" class="social-icon">TW</a>
+                            <a href="#" class="social-icon">LI</a>
+                        </div>
+                    </div>
+                    
+                    <div class="author-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto del autor">
+                        <h4>Lic. Ana Martínez</h4>
+                        <p class="author-title">Especialista en Tecnología Educativa</p>
+                        <p class="author-bio">Consultora en integración de tecnologías digitales en el aula y promotora del aprendizaje híbrido.</p>
+                        <div class="author-social">
+                            <a href="#" class="social-icon">TW</a>
+                            <a href="#" class="social-icon">LI</a>
+                        </div>
+                    </div>
+                    
+                    <div class="author-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto del autor">
+                        <h4>Prof. Miguel Sánchez</h4>
+                        <p class="author-title">Educador y Coach Parental</p>
+                        <p class="author-bio">Docente con amplia experiencia en educación primaria y secundaria, especializado en orientación familiar.</p>
+                        <div class="author-social">
+                            <a href="#" class="social-icon">TW</a>
+                            <a href="#" class="social-icon">LI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>"Familias que Acompañan"</h2>
+                    <p>Conectando la comunidad educativa</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                        <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                        <li><a href="comunicacion.html">Comunicación</a></li>
+                        <li><a href="noticias.html">Noticias Escolares</a></li>
+                        <li><a href="blog.html">Blog Educativo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>Email: soporte@familasqueacompañan.com</p>
+                    <p>Teléfono: (+51) 973-573-095</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Familias que acompañan &copy; 2025, todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

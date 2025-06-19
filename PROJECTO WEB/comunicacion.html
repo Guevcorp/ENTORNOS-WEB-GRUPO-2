@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;&nbsp;
+             <a href="nosotros.html"><img src="img/insignia.png" style="height: 65px;" width="60PX"></a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                <li><a href="comunicacion.html" class="active">Comunicación</a></li>
+                <li><a href="noticias.html">Noticias Escolares</a></li>
+                <li><a href="blog.html">Blog Educativo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Comunicación</h2>
+                <p>Mantén contacto directo con docentes y orientadores escolares</p>
+            </div>
+        </section>
+
+        <section class="login-section">
+            <div class="container">
+                <h3>Acceso al Sistema de Comunicación</h3>
+                <div class="login-container">
+                    <form id="comm-login-form">
+                        <div class="form-group">
+                            <label for="comm-username">Usuario:</label>
+                            <input type="text" id="comm-username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comm-password">Contraseña:</label>
+                            <input type="password" id="comm-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn">Iniciar Sesión</button>
+                    </form>
+                    <div class="login-help">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <p>Si no tienes acceso, contacta a la administración escolar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="communication-dashboard hidden" id="communication-dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h3>Sistema de Comunicación</h3>
+                    <button id="comm-logout-btn" class="btn btn-small">Cerrar Sesión</button>
+                </div>
+                
+                <div class="communication-layout">
+                    <div class="communication-sidebar">
+                        <div class="user-profile">
+                            <img src="https://via.placeholder.com/80" alt="Foto de perfil" class="profile-pic">
+                            <h4 id="user-name">Nombre del Usuario</h4>
+                            <p id="user-role">Padre/Madre de Familia</p>
+                        </div>
+                        
+                        <div class="communication-menu">
+                            <h4>Comunicación</h4>
+                            <ul>
+                                <li class="active" data-tab="messages">Mensajes</li>
+                                <li data-tab="meetings">Reuniones</li>
+                                <li data-tab="announcements">Anuncios</li>
+                                <li data-tab="directory">Directorio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="student-selector">
+                            <h4>Estudiantes</h4>
+                            <select id="student-selector">
+                                <option value="student1">Ana García - 3° Secundaria</option>
+                                <option value="student2">Carlos García - 5° Secundaria</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="communication-main">
+                        <div class="comm-tab-content active" id="messages-tab">
+                            <div class="tab-header">
+                                <h3>Mensajes</h3>
+                                <button class="btn btn-small" id="new-message-btn">Nuevo Mensaje</button>
+                            </div>
+                            
+                            <div class="messages-interface">
+                                <div class="contacts-list">
+                                    <div class="search-contacts">
+                                        <input type="text" placeholder="Buscar contacto...">
+                                    </div>
+                                    <div class="contacts-container">
+                                        <div class="contact active">
+                                            <img src="img/lic. Obilio.JPG" alt="Foto de contacto">
+                                            <div class="contact-info">
+                                                <h4>Lic. Obilio</h4>
+                                                <p>Tutor de Grupo</p>
+                                            </div>
+                                            <span class="unread-badge">2</span>
+                                        </div>
+                                        <div class="contact">
+                                            <img src="img/lic. Ronny.JPG" alt="Foto de contacto">
+                                            <div class="contact-info">
+                                                <h4>Lic. Ronny Cauchos</h4>
+                                                <p>Matemáticas</p>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <img src="img/lic. Pablo.JPG" alt="Foto de contacto">
+                                            <div class="contact-info">
+                                                <h4>Lic. Pedro Pablo</h4>
+                                                <p>Orientación Escolar</p>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <img src="https://via.placeholder.com/40" alt="Foto de contacto">
+                                            <div class="contact-info">
+                                                <h4>Dirección</h4>
+                                                <p>Dirección Escolar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chat-container">
+                                    <div class="chat-header">
+                                        <div class="chat-contact">
+                                            <img src="img/lic. Jhon.JPG" alt="Foto de contacto">
+                                            <div class="contact-info">
+                                                <h4>Lic. Jhon Olivera</h4>
+                                                <p>Tutor de Grupo</p>
+                                            </div>
+                                        </div>
+                                        <div class="chat-actions">
+                                            <button class="btn-icon">📞</button>
+                                            <button class="btn-icon">📹</button>
+                                            <button class="btn-icon">ℹ️</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="chat-messages">
+                                        <div class="message-date">
+                                            <span>Hoy</span>
+                                        </div>
+                                        <div class="message-bubble received">
+                                            <div class="message-content">
+                                                <p>Buenos días. Quería informarle que Ana ha mostrado un gran avance en su proyecto de ciencias. Su presentación fue excelente.</p>
+                                            </div>
+                                            <div class="message-time">10:15 AM</div>
+                                        </div>
+                                        <div class="message-bubble received">
+                                            <div class="message-content">
+                                                <p>También quería recordarle sobre la reunión de padres programada para el próximo viernes a las 5:00 PM.</p>
+                                            </div>
+                                            <div class="message-time">10:17 AM</div>
+                                        </div>
+                                        <div class="message-bubble sent">
+                                            <div class="message-content">
+                                                <p>¡Muchas gracias por la información! Me alegra mucho saber que Ana está progresando bien.</p>
+                                            </div>
+                                            <div class="message-time">10:30 AM</div>
+                                        </div>
+                                        <div class="message-bubble sent">
+                                            <div class="message-content">
+                                                <p>Confirmo mi asistencia a la reunión del viernes. ¿Hay algún tema específico que se tratará?</p>
+                                            </div>
+                                            <div class="message-time">10:31 AM</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="chat-input">
+                                        <button class="btn-icon">📎</button>
+                                        <textarea placeholder="Escribe un mensaje..."></textarea>
+                                        <button class="btn-icon send-btn">📤</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comm-tab-content" id="meetings-tab">
+                            <div class="tab-header">
+                                <h3>Reuniones</h3>
+                                <button class="btn btn-small" id="request-meeting-btn">Solicitar Reunión</button>
+                            </div>
+                            
+                            <div class="meetings-container">
+                                <div class="upcoming-meetings">
+                                    <h4>Próximas Reuniones</h4>
+                                    <div class="meeting-card upcoming">
+                                        <div class="meeting-date">
+                                            <div class="date-day">19</div>
+                                            <div class="date-month">MAY</div>
+                                        </div>
+                                        <div class="meeting-details">
+                                            <h5>Reunión General de Padres</h5>
+                                            <p>Viernes, 19 de Mayo, 5:00 PM - 6:30 PM</p>
+                                            <p>Lugar: Auditorio Principal</p>
+                                            <div class="meeting-actions">
+                                                <button class="btn btn-small">Confirmar Asistencia</button>
+                                                <button class="btn btn-small btn-outline">Agregar a Calendario</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="meeting-card upcoming">
+                                        <div class="meeting-date">
+                                            <div class="date-day">25</div>
+                                            <div class="date-month">MAY</div>
+                                        </div>
+                                        <div class="meeting-details">
+                                            <h5>Entrevista Individual - Prof. Rodríguez</h5>
+                                            <p>Jueves, 25 de Mayo, 4:00 PM - 4:30 PM</p>
+                                            <p>Lugar: Salón 15</p>
+                                            <div class="meeting-actions">
+                                                <button class="btn btn-small">Confirmar Asistencia</button>
+                                                <button class="btn btn-small btn-outline">Agregar a Calendario</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="past-meetings">
+                                    <h4>Reuniones Pasadas</h4>
+                                    <div class="meeting-card past">
+                                        <div class="meeting-date">
+                                            <div class="date-day">10</div>
+                                            <div class="date-month">ABR</div>
+                                        </div>
+                                        <div class="meeting-details">
+                                            <h5>Entrega de Calificaciones - 1er Bimestre</h5>
+                                            <p>Lunes, 10 de Abril, 5:00 PM - 7:00 PM</p>
+                                            <p>Estado: Asistió</p>
+                                            <div class="meeting-actions">
+                                                <button class="btn btn-small">Ver Resumen</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="meeting-card past">
+                                        <div class="meeting-date">
+                                            <div class="date-day">15</div>
+                                            <div class="date-month">MAR</div>
+                                        </div>
+                                        <div class="meeting-details">
+                                            <h5>Taller para Padres - Apoyo Académico</h5>
+                                            <p>Miércoles, 15 de Marzo, 6:00 PM - 7:30 PM</p>
+                                            <p>Estado: Asistió</p>
+                                            <div class="meeting-actions">
+                                                <button class="btn btn-small">Ver Materiales</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comm-tab-content" id="announcements-tab">
+                            <div class="tab-header">
+                                <h3>Anuncios Importantes</h3>
+                            </div>
+                            
+                            <div class="announcements-container">
+                                <div class="announcement">
+                                    <div class="announcement-header">
+                                        <h4>Cambio en el Calendario Escolar</h4>
+                                        <span class="announcement-date">15/05/2025</span>
+                                    </div>
+                                    <div class="announcement-content">
+                                        <p>Estimados padres de familia:</p>
+                                        <p>Les informamos que debido a actividades de capacitación docente, el viernes 26 de mayo será día no laborable para los estudiantes. Las clases se reanudarán con normalidad el lunes 29 de mayo.</p>
+                                        <p>Agradecemos su comprensión y apoyo.</p>
+                                        <p>Atentamente,<br>Dirección Escolar</p>
+                                    </div>
+                                    <div class="announcement-footer">
+                                        <span class="announcement-category">Calendario</span>
+                                        <button class="btn-small">Marcar como leído</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="announcement">
+                                    <div class="announcement-header">
+                                        <h4>Festival Cultural - Invitación</h4>
+                                        <span class="announcement-date">10/05/2025</span>
+                                    </div>
+                                    <div class="announcement-content">
+                                        <p>Estimada comunidad educativa:</p>
+                                        <p>Tenemos el agrado de invitarlos a nuestro Festival Cultural Anual, que se llevará a cabo el sábado 5 de junio de 10:00 AM a 2:00 PM en las instalaciones de la escuela.</p>
+                                        <p>El evento incluirá presentaciones artísticas, exposiciones de proyectos estudiantiles y actividades recreativas para toda la familia.</p>
+                                        <p>¡Los esperamos!</p>
+                                        <p>Comité Organizador</p>
+                                    </div>
+                                    <div class="announcement-footer">
+                                        <span class="announcement-category">Eventos</span>
+                                        <button class="btn-small">Marcar como leído</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="announcement read">
+                                    <div class="announcement-header">
+                                        <h4>Actualización de Plataforma Educativa</h4>
+                                        <span class="announcement-date">01/05/2025</span>
+                                    </div>
+                                    <div class="announcement-content">
+                                        <p>Estimados usuarios:</p>
+                                        <p>Les informamos que hemos realizado mejoras en nuestra plataforma educativa para optimizar su funcionamiento. Entre las actualizaciones se incluyen:</p>
+                                        <ul>
+                                            <li>Mejoras en el sistema de mensajería</li>
+                                            <li>Nuevas funcionalidades en el panel de estudiante</li>
+                                            <li>Mayor velocidad de carga</li>
+                                        </ul>
+                                        <p>Si experimenta algún inconveniente, por favor contacte a soporte técnico.</p>
+                                        <p>Equipo de Tecnología</p>
+                                    </div>
+                                    <div class="announcement-footer">
+                                        <span class="announcement-category">Tecnología</span>
+                                        <span class="read-status">Leído</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comm-tab-content" id="directory-tab">
+                            <div class="tab-header">
+                                <h3>Directorio Escolar</h3>
+                                <div class="directory-search">
+                                    <input type="text" placeholder="Buscar por nombre o departamento...">
+                                    <button class="btn-small">Buscar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="directory-container">
+                                <div class="directory-filters">
+                                    <button class="filter-btn active" data-filter="all">Todos</button>
+                                    <button class="filter-btn" data-filter="teachers">Docentes</button>
+                                    <button class="filter-btn" data-filter="admin">Administrativos</button>
+                                    <button class="filter-btn" data-filter="support">Apoyo Escolar</button>
+                                </div>
+                                
+                                <div class="directory-list">
+                                    <div class="directory-category">
+                                        <h4>Dirección y Coordinación</h4>
+                                        <div class="directory-items">
+                                            <div class="directory-card" data-type="admin">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Lic. Roberto Sánchez</h5>
+                                                    <p>Director</p>
+                                                    <p>director@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="directory-card" data-type="admin">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Mtra. Laura Jiménez</h5>
+                                                    <p>Coordinadora Académica</p>
+                                                    <p>coordinacion@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="directory-category">
+                                        <h4>Docentes</h4>
+                                        <div class="directory-items">
+                                            <div class="directory-card" data-type="teachers">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Prof. Carlos Martínez</h5>
+                                                    <p>Tutor 3° Primaria</p>
+                                                    <p>cmartinez@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="directory-card" data-type="teachers">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Prof. Ana Rodríguez</h5>
+                                                    <p>Matemáticas</p>
+                                                    <p>arodriguez@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="directory-card" data-type="teachers">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Prof. Miguel López</h5>
+                                                    <p>Ciencias Naturales</p>
+                                                    <p>mlopez@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="directory-category">
+                                        <h4>Apoyo Escolar</h4>
+                                        <div class="directory-items">
+                                            <div class="directory-card" data-type="support">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Lic. Patricia Gómez</h5>
+                                                    <p>Psicóloga Escolar</p>
+                                                    <p>pgomez@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="directory-card" data-type="support">
+                                                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                                                <div class="directory-info">
+                                                    <h5>Lic. Fernando Torres</h5>
+                                                    <p>Orientador Educativo</p>
+                                                    <p>ftorres@educonnect.com</p>
+                                                    <div class="directory-actions">
+                                                        <button class="btn-small">Enviar Mensaje</button>
+                                                        <button class="btn-small btn-outline">Solicitar Cita</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="communication-info">
+            <div class="container">
+                <h3>Canales de Comunicación</h3>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <h4>Mensajería Directa</h4>
+                        <p>Comunícate directamente con docentes y personal escolar a través de nuestro sistema de mensajería seguro.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📅</div>
+                        <h4>Reuniones Virtuales</h4>
+                        <p>Agenda y participa en reuniones virtuales con el personal educativo desde cualquier lugar.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📢</div>
+                        <h4>Anuncios Importantes</h4>
+                        <p>Recibe notificaciones sobre eventos escolares, cambios en el calendario y otra información relevante.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>"Familias que Acompañan"</h2>
+                    <p>Conectando la comunidad educativa</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                        <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                        <li><a href="comunicacion.html">Comunicación</a></li>
+                        <li><a href="noticias.html">Noticias Escolares</a></li>
+                        <li><a href="blog.html">Blog Educativo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>Email: soporte@familasqueacompañan.com</p>
+                    <p>Teléfono: (+51) 973-573-095</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Familias que acompañan &copy; 2025, todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

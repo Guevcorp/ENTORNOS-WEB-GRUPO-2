@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;&nbsp;
+             <a href="nosotros.html"><img src="img/insignia.png" style="height: 65px;" width="60PX"></a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                <li><a href="comunicacion.html">Comunicación</a></li>
+                <li><a href="noticias.html">Noticias Escolares</a></li>
+                <li><a href="blog.html">Blog Educativo</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Atención a padres y soporte técnico</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Teléfono</h3>
+                        <p>(+51) 973-573-095</p>
+                        <p>Lunes a Viernes: 8:00 AM - 4:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p>sanlorenzot2024@gmail.com</p>
+                        <p>soporte@familasqueacompañan.com</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Dirección</h3>
+                        <p>Av. carretera cañete s/n</p>
+                        <p>Ciudad Escolar, Distrito Alis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-form-container">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre Completo:</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email:</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Teléfono:</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Asunto:</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="info">Información General</option>
+                                    <option value="support">Soporte Técnico</option>
+                                    <option value="academic">Consulta Académica</option>
+                                    <option value="admin">Asuntos Administrativos</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Mensaje:</label>
+                                <textarea id="contact-message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" required>
+                                    Acepto la política de privacidad y el tratamiento de mis datos.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-sidebar">
+                        <div class="contact-map">
+                            <h3>Nuestra Ubicación</h3>                            
+                            <div class="map-container">
+                                <!-- Acá nuestra ubicacion-->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.3144433922192!2d-75.78686049266328!3d-12.281028770462955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910f036d79c2fff7%3A0xdf535e537800dba0!2sAlis%2015786!5e0!3m2!1ses-419!2spe!4v1747712259523!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-hours">
+                            <h3>Horario de Atención</h3>
+                            <ul class="hours-list">
+                                <li>
+                                    <span class="day">Lunes - Viernes:</span>
+                                    <span class="hours">8:00 AM - 4:00 PM</span>
+                                </li>
+                               
+                                <li>
+                                    <span class="day">Sabado - Domingo:</span>
+                                    <span class="hours">Cerrado</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="social-connect">
+                            <h3>Conéctate con Nosotros</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon-large">Facebook</a>
+                                <a href="#" class="social-icon-large">Twitter</a>
+                                <a href="#" class="social-icon-large">Instagram</a>
+                                <a href="#" class="social-icon-large">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h3>Preguntas Frecuentes</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Cómo puedo recuperar mi contraseña?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Para recuperar tu contraseña, haz clic en el enlace "¿Olvidaste tu contraseña?" en la página de inicio de sesión. Recibirás un correo electrónico con instrucciones para restablecerla.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Cómo puedo actualizar la información de contacto?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Puedes actualizar tu información de contacto accediendo a tu perfil en el panel de usuario. Busca la opción "Editar Perfil" y actualiza los campos necesarios.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Qué hago si no puedo acceder al Panel de Estudiante?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Si no puedes acceder al Panel de Estudiante, verifica que estés usando las credenciales correctas. Si el problema persiste, contacta a soporte técnico a través del formulario de contacto o llamando al número de atención.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Cómo puedo solicitar una reunión con un docente?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Puedes solicitar una reunión con un docente a través de la sección de "Comunicación" en la plataforma. Selecciona al docente con quien deseas reunirte y utiliza la opción "Solicitar Reunión".</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Los recursos para padres tienen algún costo?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, todos los recursos para padres disponibles en la plataforma son gratuitos para las familias de nuestra comunidad educativa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-options">
+            <div class="container">
+                <h3>Opciones de Soporte</h3>
+                <div class="support-cards">
+                    <div class="support-card">
+                        <div class="support-icon">🔧</div>
+                        <h4>Soporte Técnico</h4>
+                        <p>Ayuda con problemas de acceso, funcionamiento de la plataforma y otras cuestiones técnicas.</p>
+                        <a href="#" class="btn btn-small">Solicitar Soporte</a>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-icon">📚</div>
+                        <h4>Soporte Académico</h4>
+                        <p>Consultas sobre calificaciones, tareas, materiales de estudio y otros asuntos académicos.</p>
+                        <a href="#" class="btn btn-small">Contactar Coordinación</a>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-icon">📝</div>
+                        <h4>Trámites Administrativos</h4>
+                        <p>Ayuda con inscripciones, documentación, pagos y otros trámites administrativos.</p>
+                        <a href="#" class="btn btn-small">Contactar Administración</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>"Familias que Acompañan"</h2>
+                    <p>Conectando la comunidad educativa</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="panel-estudiante.html">Panel de Estudiante</a></li>
+                        <li><a href="recursos-padres.html">Recursos para Padres</a></li>
+                        <li><a href="comunicacion.html">Comunicación</a></li>
+                        <li><a href="noticias.html">Noticias Escolares</a></li>
+                        <li><a href="blog.html">Blog Educativo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>Email: soporte@familasqueacompañan.com</p>
+                    <p>Teléfono: (+51) 973-573-095</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Familias que acompañan &copy; 2025, todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
